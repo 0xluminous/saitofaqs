@@ -17,7 +17,7 @@ export default function Home() {
         </h1>
 
         <p className={styles.description}>
-          Coming Soon....
+          coming Soon....
         </p>
 
       </main>

@@ -7,14 +7,15 @@
      |____/ \__,_|_|\__\___/  |_|/_/   \_\__\_\
                                                
 
-> The most frequently asked Saito questions
+> [Saito FAQs](https://saitofaqs.com) codebase
 
 ## Getting Started
 
 Run the development server:
 
 ```bash
-npm run dev
+npm install
+./node_modules/.bin/next
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to see the development site

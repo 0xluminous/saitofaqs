@@ -1,4 +1,3 @@
-/*
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
@@ -13,11 +12,16 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+        <h1 className={styles.title} align="center">
           Saito FAQs
         </h1>
 
-        <p className={styles.description}>
+        <p className={styles.description} align="center">
           coming Soon....
         </p>
 
@@ -25,9 +29,8 @@ export default function Home() {
     </div>
   )
 }
-*/
 
-// pages/index.js
+/*
 
 import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemote } from 'next-mdx-remote'
@@ -48,3 +51,4 @@ export async function getStaticProps() {
   const mdxSource = await serialize(source)
   return { props: { source: mdxSource } }
 }
+*/

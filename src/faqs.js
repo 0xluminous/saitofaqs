@@ -25,5 +25,6 @@ function slugifyFilepath(filepath) {
 export function parse(filename) {
   const obj = matter.read(filename);
   obj.slug = slugifyFilepath(obj.path);
+  delete obj.orig;
   return obj;
 }

@@ -1,1 +1,19 @@
+.wrapper {
+  border: 1px solid green;
+  margin-left: 324px;
+}
 
+.header {
+  padding-top: 30px;
+}
+
+.cube {
+  position: absolute;
+  left: -80px;
+  top: -100px;
+
+}
+
+.header img {
+  border: none;
+}

@@ -1,54 +1,33 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import Head from "next/head"
+import Image from "next/image"
+import styles from "../styles/Home.module.css"
+import { Meta, Header } from "../src/components"
+import * as faqs from "../src/faqs"
 
-export default function Home() {
+export default function Home(props={}) {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Saito FAQs</title>
-        <meta name="description" content="Saito Frequently Asked Questions" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <div>
+      <Meta />
 
-      <main className={styles.main}>
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-        <h1 className={styles.title} align="center">
-          Saito FAQs
-        </h1>
-
-        <p className={styles.description} align="center">
-          coming Soon....
-        </p>
-
-      </main>
+      <div className="fluid-container">
+          <div className="columns">
+            <div className="column">
+              <div className={styles.wrapper}>
+                <Header />
+                {props.list.map(l => {
+                  return <a href={"faq/" + l.slug}>{l.slug}</a>
+                })}
+              </div>
+            </div>
+          </div>
+      </div>
     </div>
   )
 }
 
-/*
-
-import { serialize } from 'next-mdx-remote/serialize'
-import { MDXRemote } from 'next-mdx-remote'
-
-const components = { }
-
-export default function Post({ source }) {
-  return (
-    <div className="wrapper">
-      <MDXRemote {...source} components={components} />
-    </div>
-  )
+export async function getStaticProps({ params }) {
+  const list = faqs.getAll();
+  console.log(list);
+  return { props: { list } };
 }
 
-export async function getStaticProps() {
-  // MDX text - can be from a local file, database, anywhere
-  const source = 'Some **mdx** text, with a component'
-  const mdxSource = await serialize(source)
-  return { props: { source: mdxSource } }
-}
-*/

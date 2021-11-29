@@ -17,3 +17,12 @@ npm install
 ```
 
 Open [http://localhost:3000](http://localhost:3000) to see the development site
+
+
+## How to add Saito FAQs
+
+
+## Categories
+- Economics
+- Tokenomics
+- Technical

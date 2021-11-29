@@ -1,13 +1,31 @@
 import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemote } from 'next-mdx-remote'
+import { Meta, Header } from "../../src/components"
+import styles from "../../styles/faq.module.css"
 import * as faqs from "../../src/faqs"
 
 const componentsOverride = { }
 
 export default function Post({ source }) {
   return (
-    <div className="wrapper">
-      <MDXRemote {...source} components={componentsOverride} />
+    <div>
+      <Meta />
+
+      <div className="container">
+          <div className={styles.wrapper}>
+            <div className="columns">
+              <div className="column">
+                <Header />
+              </div>
+            </div>
+            <div className={styles.contentWrapper}>
+              <div className="content">
+                <MDXRemote {...source} components={componentsOverride} />
+                ⬅ <a href="/">back to home</a>
+              </div>
+            </div>
+          </div>
+      </div>
     </div>
   )
 }

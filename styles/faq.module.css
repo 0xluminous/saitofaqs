@@ -1,10 +1,30 @@
 .wrapper {
-  max-width: 900px;
+  max-width: 720px;
 }
 
 .header {
   padding-top: 40px;
 }
+
+.header img {
+  border: none;
+}
+
+.contentWrapper {
+  margin-left: 10px;
+  margin-right: 10px;
+  max-width: 600px;
+}
+
+.faqTitle {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+/* 320, 418, 641, 961, 1025, 1281 */
+
+/* cube: start */
 
 .cube {
   position: absolute;
@@ -13,12 +33,6 @@
   top: -50px;
 
 }
-
-.header img {
-  border: none;
-}
-
-/* 320, 418, 641, 961, 1025, 1281 */
 
 
 @media (min-width:641px)  {
@@ -35,25 +49,25 @@
 
 @media (min-width:961px)  {
   .wrapper {
-    margin-left: 198px;
+    margin-left: 188px;
   }
 
   .cube {
     width: 250px;
     left: -80px;
-    top: -34px;
+    top: -22px;
   }
 }
 
 @media (min-width:1025px)  {
   .wrapper {
-    margin-left: 254px;
+    margin-left: 243px;
   }
 
   .cube {
     width: 300px;
     left: -80px;
-    top: -60px;
+    top: -40px;
   }
 }
 
@@ -65,6 +79,8 @@
   .cube {
     width: 372px;
     left: -80px;
-    top: -100px;
+    top: -74px;
   }
 }
+
+/* cube: end */

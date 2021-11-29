@@ -9,13 +9,13 @@ export default function Home(props={}) {
     <div>
       <Meta />
 
-      <div className="fluid-container">
+      <div className="container">
           <div className="columns">
             <div className="column">
               <div className={styles.wrapper}>
                 <Header />
                 {props.list.map(l => {
-                  return <a href={"faq/" + l.slug}>{l.slug}</a>
+                  return <div><a href={"faq/" + l.slug}>{l.slug}</a></div>
                 })}
               </div>
             </div>

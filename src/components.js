@@ -12,15 +12,11 @@ export function Meta() {
 
 export function Header() {
   return (
-    <div className="columns">
-      <div className="column">
-          <div className={styles.header}>
-            <img src="/cube.png" alt="Saito Cube" className={styles.cube} />
-            <a href="/">
-              <img src="/logo.png" alt="Saito FAQs" />
-            </a>
-          </div>
+      <div className={styles.header}>
+        <img src="/cube.png" alt="Saito Cube" className={styles.cube} />
+        <a href="/">
+          <img src="/logo.png" alt="Saito FAQs" />
+        </a>
       </div>
-    </div>
   )
 }

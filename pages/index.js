@@ -1,4 +1,5 @@
 import Head from "next/head"
+import Link from "next/link"
 import Image from "next/image"
 import styles from "../styles/faq.module.css"
 import { Meta, Header } from "../src/components"
@@ -21,7 +22,7 @@ export default function Home(props={}) {
                 <div className="column">
                   <div className="content">
                     {props.list.map(l => {
-                      return <a className={styles.faqTitle} href={"faq/" + l.slug}>{l.data.title}</a>
+                      return <Link href={"faq/" + l.slug}><a className={styles.faqTitle}>{l.data.title}</a></Link>
                     })}
                   </div>
                 </div>

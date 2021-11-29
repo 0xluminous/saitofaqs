@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemote } from 'next-mdx-remote'
 import { Meta, Header } from "../../src/components"
@@ -21,7 +22,7 @@ export default function Post({ source }) {
             <div className={styles.contentWrapper}>
               <div className="content">
                 <MDXRemote {...source} components={componentsOverride} />
-                ⬅ <a href="/">back to home</a>
+                ⬅ <Link href="/">back to home</Link>
               </div>
             </div>
           </div>

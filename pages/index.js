@@ -22,7 +22,7 @@ export default function Home(props={}) {
                 <div className="column">
                   <div className="content">
                     {props.list.map(l => {
-                      return <Link href={"faq/" + l.slug}><a className={styles.faqTitle}>{l.data.title}</a></Link>
+                      return <Link key={l.slug} href={"faq/" + l.slug}><a className={styles.faqTitle}>{l.data.title}</a></Link>
                     })}
                   </div>
                 </div>

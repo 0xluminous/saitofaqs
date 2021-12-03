@@ -22,7 +22,7 @@ export default function Post({ source }) {
             <div className={styles.contentWrapper}>
               <div className="content">
                 <MDXRemote {...source} components={componentsOverride} />
-                ⬅ <Link href="/">back to home</Link>
+                <img className={styles.backIcon} src="/back-arrow.svg" /> <Link href="/">back to home</Link>
               </div>
             </div>
           </div>

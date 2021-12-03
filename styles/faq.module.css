@@ -20,6 +20,15 @@
   display: block;
   margin-bottom: 10px;
   font-size: 18px;
+  font-weight: bold;
+}
+
+.backIcon {
+  position: relative;
+  top: 4px;
+  filter: invert(88%) sepia(4%) saturate(639%) hue-rotate(183deg) brightness(110%) contrast(103%);
+  width: 18px;
+  height: 18px;
 }
 
 /* 320, 418, 641, 961, 1025, 1281 */
@@ -27,6 +36,7 @@
 /* cube: start */
 
 .cube {
+  pointer-events: none;
   position: absolute;
   width: 175px;
   right: -30px;

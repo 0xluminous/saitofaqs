@@ -17,16 +17,12 @@ export default function Home(props={}) {
                 <Header />
               </div>
             </div>
-            <div className="margin">
-              <div className="columns">
-                <div className="column">
-                  <div className="content">
-                    {props.list.map(l => {
-                      return <Link key={l.slug} href={"faq/" + l.slug}><a className={styles.faqTitle}>{l.data.title}</a></Link>
-                    })}
-                  </div>
+            <div className={styles.contentWrapper}>
+                <div className="content">
+                  {props.list.map(l => {
+                    return <Link key={l.slug} href={"faq/" + l.slug}><a className={styles.faqTitle}>{l.data.title}</a></Link>
+                  })}
                 </div>
-              </div>
             </div>
           </div>
       </div>

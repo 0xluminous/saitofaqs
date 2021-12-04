@@ -7,22 +7,23 @@ import * as faqs from "../../src/faqs"
 
 const componentsOverride = { }
 
-export default function Post({ source }) {
+export default function Post({ source, faq }) {
   return (
     <div>
       <Meta />
 
+      <div className="navbar"></div>
       <div className="container">
           <div className={styles.wrapper}>
-            <div className="columns">
-              <div className="column">
-                <Header />
-              </div>
-            </div>
+            <Header />
             <div className={styles.contentWrapper}>
               <div className="content">
+                <h1>{faq.data.title}</h1>
                 <MDXRemote {...source} components={componentsOverride} />
                 <img className={styles.backIcon} src="/back-arrow.svg" /> <Link href="/">back to home</Link>
+                <div className={styles.source}>
+                  <Link href={faq.data.source}>source</Link>
+                </div>
               </div>
             </div>
           </div>
@@ -34,7 +35,7 @@ export default function Post({ source }) {
 export async function getStaticProps({ params }) {
   const faq = faqs.getBySlug(params.slug);
   const source = await serialize(faq.content)
-  return { props: { source } };
+  return { props: { source, faq } };
 }
 
 export async function getStaticPaths() {

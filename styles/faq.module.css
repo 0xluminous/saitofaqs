@@ -13,10 +13,6 @@
 }
 
 .contentWrapper {
-  /*
-  margin-left: 10px;
-  margin-right: 10px;
-  */
   padding: 20px 30px;
   max-width: 600px;
   background: #FEFFFF;
@@ -32,9 +28,13 @@
 .backIcon {
   position: relative;
   top: 4px;
-  filter: invert(88%) sepia(4%) saturate(639%) hue-rotate(183deg) brightness(110%) contrast(103%);
+  filter: invert(32%) sepia(80%) saturate(1253%) hue-rotate(206deg) brightness(92%) contrast(88%);
   width: 18px;
   height: 18px;
+}
+
+.source {
+  float: right;
 }
 
 /* 320, 418, 641, 961, 1025, 1281 */
@@ -44,10 +44,9 @@
 .cube {
   pointer-events: none;
   position: absolute;
-  width: 175px;
-  right: -30px;
-  top: -50px;
-
+  width: 125px;
+  right: -50px;
+  top: -59px;
 }
 
 

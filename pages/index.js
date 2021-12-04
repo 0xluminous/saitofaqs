@@ -10,8 +10,7 @@ export default function Home(props={}) {
     <div>
       <Meta />
 
-      <div className="navbar">
-      </div>
+      <div className="navbar"></div>
       <div className="container">
           <div className={styles.wrapper}>
             <Header />
@@ -30,7 +29,6 @@ export default function Home(props={}) {
 
 export async function getStaticProps({ params }) {
   const list = faqs.getAll();
-  console.log(list);
   return { props: { list } };
 }
 

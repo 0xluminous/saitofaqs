@@ -1,4 +1,4 @@
-const log = require("debug")("saitofaq:lib");
+const log = require("debug")("saitofaq:faqs");
 const matter = require("gray-matter");
 const glob = require("glob");
 const path = require("path");
@@ -29,10 +29,13 @@ function slugifyFilepath(filepath) {
   return path.basename(filepath).replace(/\.md$/, "");
 }
 
-export function parse(filename) {
-  const obj = matter.read(filename);
+function normalize(obj) {
   obj.slug = slugifyFilepath(obj.path);
   obj.data.priority = Number(obj.data.priority || 0);
   delete obj.orig;
   return obj;
+}
+
+export function parse(filename) {
+  return normalize(matter.read(filename));
 }

@@ -17,6 +17,8 @@
   padding: 20px 30px;
   max-width: 600px;
   background: #FEFFFF;
+  min-height: 250px;
+  border-radius: 1px;
 }
 
 .faqTitle {

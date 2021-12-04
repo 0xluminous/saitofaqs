@@ -28,9 +28,14 @@ export default function Post({ source, faq }) {
                     return <span key={tag} className={styles.tag}><Link href={href}>{value}</Link></span>;
                   })}
                 </div>}
-                <img className={styles.backIcon} src="/back-arrow.svg" /> <Link href="/">back to home</Link>
-                <div className={styles.source}>
-                  <Link href={faq.data.source}>source</Link>
+                <div className={styles.meta}>
+                  <img className={styles.backIcon} src="/back-arrow.svg" /> <Link href="/">back to home</Link>
+                  <div className={styles.sourceLink}>
+                    <Link href={faq.data.source}>source</Link>
+                  </div>
+                  <div className={styles.editLink}>
+                    <Link href={"https://github.com/0xluminous/saitofaqs/edit/main/faqs/" + faq.slug + ".md"}>edit</Link>
+                  </div>
                 </div>
               </div>
             </div>

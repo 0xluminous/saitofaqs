@@ -18,7 +18,7 @@ export default function Tag({ slug, list }) {
             <Header />
             <div className={styles.contentWrapper}>
               <div className="content">
-                <h1 className="title">{utils.capitalizeFirstLetter(slug)} Saito FAQs</h1>
+                <h1 className="title">Saito {utils.capitalizeFirstLetter(slug)} FAQs</h1>
                 {list.map(faq => {
                   return <Link key={faq.slug} href={"/faq/" + faq.slug}><a className={styles.faqTitle}>{faq.data.title}</a></Link>
                 })}
@@ -32,7 +32,6 @@ export default function Tag({ slug, list }) {
 
 export async function getStaticProps({ params }) {
   const list = tags.getBySlug(params.slug);
-  console.log("LIST", list);
   return { props: { list, slug: params.slug } };
 }
 

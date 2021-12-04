@@ -25,7 +25,7 @@ export default function Post({ source, faq }) {
                     if (!tag) { return; }
                     const value = `#${tag}`;
                     const href = `/tag/${tag}`;
-                    return <span className={styles.tag}><Link key={tag} href={href}>{value}</Link></span>;
+                    return <span key={tag} className={styles.tag}><Link href={href}>{value}</Link></span>;
                   })}
                 </div>}
                 <img className={styles.backIcon} src="/back-arrow.svg" /> <Link href="/">back to home</Link>

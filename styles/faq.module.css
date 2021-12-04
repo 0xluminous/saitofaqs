@@ -3,7 +3,9 @@
 }
 
 .header {
-  padding-top: 40px;
+  padding-top: 20px;
+  padding-bottom: 12px;
+  margin-left: 20px;
 }
 
 .header img {
@@ -11,9 +13,13 @@
 }
 
 .contentWrapper {
+  /*
   margin-left: 10px;
   margin-right: 10px;
+  */
+  padding: 20px 30px;
   max-width: 600px;
+  background: #FEFFFF;
 }
 
 .faqTitle {
@@ -83,7 +89,7 @@
 
 @media (min-width:1281px)  {
   .wrapper {
-    margin-left: 324px;
+    margin-left: 294px;
   }
 
   .cube {

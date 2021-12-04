@@ -10,13 +10,11 @@ export default function Home(props={}) {
     <div>
       <Meta />
 
+      <div className="navbar">
+      </div>
       <div className="container">
           <div className={styles.wrapper}>
-            <div className="columns">
-              <div className="column">
-                <Header />
-              </div>
-            </div>
+            <Header />
             <div className={styles.contentWrapper}>
                 <div className="content">
                   {props.list.map(l => {

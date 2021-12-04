@@ -50,4 +50,14 @@ a:hover {
   font-weight: 400;
 }
 
+.navbar {
+  height: 80px;
+  z-index: 0;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  background: #FF3246;
+  position: absolute;
+}
+
 /* 320, 418, 641, 961, 1025, 1281 */

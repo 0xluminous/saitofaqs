@@ -1,4 +1,17 @@
 @import 'bulma/css/bulma.css';
+
+/*
+ * #FEFFFF white
+ * #F5FCFF off-white
+ * #CDD1D4 very light gray
+ * #A5A6A9 light gray
+ * #7C7B7F dark gray
+ * #545054 very dark gray
+ * #2C2529 black
+ * #FF3246 red
+ * #4062D6 blue (currently unused)
+ * #0AD096 green (currently unushed)
+ */
  
 html,
 body {

@@ -13,7 +13,7 @@ export function Meta() {
 export function Header() {
   return (
       <div className={styles.header}>
-        <img src="/cube.png" alt="Saito Cube" className={styles.cube} />
+        <img src="/red-cube.png" alt="Saito Cube" className={styles.cube} />
         <a href="/">
           <img src="/logo.png" alt="Saito FAQs" />
         </a>

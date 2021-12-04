@@ -20,6 +20,14 @@ export default function Post({ source, faq }) {
               <div className="content">
                 <h1>{faq.data.title}</h1>
                 <MDXRemote {...source} components={componentsOverride} />
+                {(faq.data.tags && faq.data.tags.length > 0) && <div className={styles.tags}>
+                  {faq.data.tags.map(tag => {
+                    if (!tag) { return; }
+                    const value = `#${tag}`;
+                    const href = `/tag/${tag}`;
+                    return <span className={styles.tag}><Link key={tag} href={href}>{value}</Link></span>;
+                  })}
+                </div>}
                 <img className={styles.backIcon} src="/back-arrow.svg" /> <Link href="/">back to home</Link>
                 <div className={styles.source}>
                   <Link href={faq.data.source}>source</Link>

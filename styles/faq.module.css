@@ -33,6 +33,19 @@
   height: 18px;
 }
 
+.tags {
+  margin-bottom: 20px;
+}
+
+.tag {
+  margin-right: 14px;
+}
+
+.tag a {
+  color: #A5A6A9;
+  font-style: italic;
+}
+
 .source {
   float: right;
 }

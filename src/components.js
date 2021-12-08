@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/faq.module.css'
+import * as utils from "../src/utils"
 
 export function Meta() {
   return <Head>
@@ -25,5 +26,22 @@ export function Header() {
           <img src="/logo.png" alt="Saito FAQs" />
         </a>
       </div>
+  )
+}
+
+export function RelatedTags(related) {
+  return (
+    <div className={styles.relatedTags}>
+      {Object.keys(related).map(tag => {
+        return <div className={styles.relatedTagsGroup}>
+          <h2 className="title is-5 mb-2 mt-2">Other {utils.capitalizeFirstLetter(tag)} Questions</h2>
+          {related[tag].map(faq => {
+            return <div>
+              <a href={"/faq/" + faq.slug}>{faq.data.title}</a>
+            </div>
+          })}
+        </div>
+      })}
+    </div>
   )
 }

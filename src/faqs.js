@@ -39,3 +39,30 @@ function normalize(obj) {
 export function parse(filename) {
   return normalize(matter.read(filename));
 }
+
+export function getByTags(tags, excludeSlugs=null) {
+  if (!tags) { tags = [] }
+  if (!excludeSlugs) { excludeSlugs = [] }
+  const grouped = {};
+  const all = getAll();
+  for (const faq of all) {
+    if (excludeSlugs.indexOf(faq.slug) > -1) { continue }
+    const faqTags = new Set(faq.data.tags || []);
+    const intersections = new Set([...tags].filter(f => faqTags.has(f)));
+    for (const intersection of intersections) {
+      if (!grouped[intersection]) {
+        grouped[intersection] = [faq];
+      } else {
+        grouped[intersection].push(faq);
+      }
+    }
+  }
+
+  return grouped;
+}
+
+export function getRelated(faq) {
+  const tags = faq.data.tags || [];
+  const related = getByTags(tags, [faq.slug]);
+  return related;
+}

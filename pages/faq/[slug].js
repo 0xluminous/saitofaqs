@@ -1,13 +1,13 @@
 import Link from "next/link"
 import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemote } from 'next-mdx-remote'
-import { Meta, Header } from "../../src/components"
+import { Meta, Header, RelatedTags } from "../../src/components"
 import styles from "../../styles/faq.module.css"
 import * as faqs from "../../src/faqs"
 
 const componentsOverride = { }
 
-export default function Post({ source, faq }) {
+export default function Post({ source, faq, related }) {
   return (
     <div>
       <Meta />
@@ -39,6 +39,7 @@ export default function Post({ source, faq }) {
                 </div>
               </div>
             </div>
+            <RelatedTags {...related} />
           </div>
       </div>
     </div>
@@ -47,8 +48,9 @@ export default function Post({ source, faq }) {
 
 export async function getStaticProps({ params }) {
   const faq = faqs.getBySlug(params.slug);
-  const source = await serialize(faq.content)
-  return { props: { source, faq } };
+  const source = await serialize(faq.content);
+  const related = faqs.getRelated(faq);
+  return { props: { source, faq, related } };
 }
 
 export async function getStaticPaths() {

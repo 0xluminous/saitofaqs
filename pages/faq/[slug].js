@@ -8,7 +8,7 @@ import * as faqs from "../../src/faqs"
 
 const componentsOverride = { }
 
-export default function Post({ source, faq, related }) {
+export default function FAQ({ source, faq, related }) {
   return (
     <div>
       <Meta />

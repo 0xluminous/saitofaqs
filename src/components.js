@@ -5,7 +5,7 @@ import * as utils from "../src/utils"
 
 export function Meta() {
   return <Head>
-    <title>Saito FAQs</title>
+    <title key="title">Saito FAQs</title>
     <meta name="description" content="Saito Frequently Asked Questions" />
     <link rel="icon" href="/favicon.ico" />
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9E7G7PSM9Z"></script>

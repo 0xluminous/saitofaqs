@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Head from 'next/head'
 import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemote } from 'next-mdx-remote'
 import { Meta, Header, RelatedTags } from "../../src/components"
@@ -11,6 +12,9 @@ export default function Post({ source, faq, related }) {
   return (
     <div>
       <Meta />
+      <Head>
+        <title key="title">{faq.data.title} — Saito FAQs</title>
+      </Head>
 
       <div className="navbar"></div>
       <div className="container">

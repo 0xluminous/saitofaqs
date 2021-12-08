@@ -17,10 +17,7 @@ export default function Home(props={}) {
             <div className={styles.contentWrapper}>
                 <div className="content">
                   {props.list.map(l => {
-                    return <div>
-                      {/*l.content*/}
-                      <Link key={l.slug} href={"/faq/" + l.slug}><a className={styles.faqTitle}>{l.data.title}</a></Link>
-                    </div>
+                    return <Link key={l.slug} href={"/faq/" + l.slug}><a className={styles.faqTitle}>{l.data.title}</a></Link>
                   })}
                 </div>
             </div>

@@ -33,7 +33,7 @@ export default function FAQ({ source, faq, related }) {
                   })}
                 </div>}
                 <div className={styles.meta}>
-                  <img className={styles.backIcon} src="/back-arrow.svg" /> <Link href="/">back to home</Link>
+                  <img className={styles.backIcon} src="/back-arrow.svg" /> <Link href="/">back home</Link>
                   <div className={styles.sourceLink}>
                     <Link href={faq.data.source}>source</Link>
                   </div>

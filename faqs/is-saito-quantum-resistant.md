@@ -1,6 +1,6 @@
 ---
 title: Is Saito quantum resistant?
-source: /sources/quantom-resistance.png
+source: https://t.me/SaitoIO/162981
 priority: -10
 tags:
 - security

@@ -15,17 +15,35 @@
 
 .contentWrapper {
   padding: 20px 30px;
-  max-width: 600px;
+  max-width: 650px;
   background: #FEFFFF;
   min-height: 250px;
   border-radius: 1px;
 }
 
+.contentWrapper a {
+  color: #7C7B7F;
+}
+
+.subcontentWrapper {
+  max-width: 650px;
+  padding: 20px 30px;
+}
+
+.subcontentWrapper a {
+  line-height: 22px
+}
+
 .faqTitle {
   display: block;
   margin-bottom: 10px;
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 16px;
+  font-weight: 500;
+  color: #7C7B7F;
+}
+
+.faqTitle:hover, .faqTitle:active {
+  color: #545054;
 }
 
 .backIcon {

@@ -4,6 +4,8 @@ import Image from "next/image"
 import styles from "../styles/faq.module.css"
 import { Meta, Header } from "../src/components"
 import * as faqs from "../src/faqs"
+import * as tags from "../src/tags"
+import * as utils from "../src/utils"
 import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemote } from 'next-mdx-remote'
 
@@ -15,7 +17,7 @@ export function HomepageFAQ({ source, faq }) {
   </div>
 }
 
-export default function Home({ priority, all }) {
+export default function Home({ priority, grouped }) {
   return (
     <div>
       <Meta />
@@ -30,13 +32,22 @@ export default function Home({ priority, all }) {
                     return <HomepageFAQ key={props.faq.slug} {...props} />
                   })}
 
-                  <br />
-                  <h2 className="title is-5">All Questions</h2>
-                  {all.map(l => {
-                    return <Link key={l.slug} href={"/faq/" + l.slug}><a className={styles.faqTitle}>{l.data.title}</a></Link>
-                  })}
                 </div>
             </div>
+
+            <div className={styles.subcontentWrapper}>
+              <div className="columns is-multiline">
+                {Object.keys(grouped).map(group => {
+                  return <div key={group} className="column is-half mb-4">
+                    <h2 className="title is-5 mb-1">{utils.capitalizeFirstLetter(group)}</h2>
+                    {grouped[group].map(l => {
+                      return <Link key={l.slug} href={"/faq/" + l.slug}><a className={styles.faqTitle}>{l.data.title}</a></Link>
+                    })}
+                  </div>
+                })}
+              </div>
+            </div>
+
           </div>
       </div>
     </div>
@@ -44,7 +55,8 @@ export default function Home({ priority, all }) {
 }
 
 export async function getStaticProps({ params }) {
-  const all = faqs.getAll();
+  const allTags = tags.getAll();
+  const grouped = faqs.getByTags(allTags);
   const priority = [];
 
   const slugs = [
@@ -59,6 +71,6 @@ export async function getStaticProps({ params }) {
     priority.push({ faq, source });
   }
 
-  return { props: { priority, all } };
+  return { props: { priority, grouped } };
 }
 

@@ -8,7 +8,33 @@ import * as faqs from "../../src/faqs"
 
 const componentsOverride = { }
 
-export default function FAQ({ source, faq, related }) {
+export function FAQ({ source, faq }) {
+  return (<div className={styles.contentWrapper}>
+            <div className="content">
+              <h1>{faq.data.title}</h1>
+              <MDXRemote {...source} components={componentsOverride} />
+              {(faq.data.tags && faq.data.tags.length > 0) && <div className={styles.tags}>
+                {faq.data.tags.map(tag => {
+                  if (!tag) { return; }
+                  const value = `#${tag}`;
+                  const href = `/tag/${tag}`;
+                  return <span key={tag} className={styles.tag}><Link href={href}>{value}</Link></span>;
+                })}
+              </div>}
+              <div className={styles.meta}>
+                <img className={styles.backIcon} src="/back-arrow.svg" /> <Link href="/">back home</Link>
+                <div className={styles.sourceLink}>
+                  <Link href={faq.data.source}>source</Link>
+                </div>
+                <div className={styles.editLink}>
+                  <Link href={"https://github.com/0xluminous/saitofaqs/edit/main/faqs/" + faq.slug + ".md"}>edit</Link>
+                </div>
+              </div>
+            </div>
+          </div>)
+}
+
+export default function FAQPage({ source, faq, related }) {
   return (
     <div>
       <Meta />
@@ -20,29 +46,7 @@ export default function FAQ({ source, faq, related }) {
       <div className="container">
           <div className={styles.wrapper}>
             <Header />
-            <div className={styles.contentWrapper}>
-              <div className="content">
-                <h1>{faq.data.title}</h1>
-                <MDXRemote {...source} components={componentsOverride} />
-                {(faq.data.tags && faq.data.tags.length > 0) && <div className={styles.tags}>
-                  {faq.data.tags.map(tag => {
-                    if (!tag) { return; }
-                    const value = `#${tag}`;
-                    const href = `/tag/${tag}`;
-                    return <span key={tag} className={styles.tag}><Link href={href}>{value}</Link></span>;
-                  })}
-                </div>}
-                <div className={styles.meta}>
-                  <img className={styles.backIcon} src="/back-arrow.svg" /> <Link href="/">back home</Link>
-                  <div className={styles.sourceLink}>
-                    <Link href={faq.data.source}>source</Link>
-                  </div>
-                  <div className={styles.editLink}>
-                    <Link href={"https://github.com/0xluminous/saitofaqs/edit/main/faqs/" + faq.slug + ".md"}>edit</Link>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <FAQ faq={faq} source={source} />
             <RelatedTags {...related} />
           </div>
       </div>

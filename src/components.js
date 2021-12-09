@@ -33,7 +33,7 @@ export function RelatedTags(related) {
   return (
     <div className={styles.relatedTags}>
       {Object.keys(related).map(tag => {
-        return <div className={styles.relatedTagsGroup}>
+        return <div key={tag} className={styles.relatedTagsGroup}>
           <h2 className="title is-5 mb-2 mt-2">Other {utils.capitalizeFirstLetter(tag)} Questions</h2>
           {related[tag].map(faq => {
             return <div>

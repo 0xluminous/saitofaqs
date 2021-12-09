@@ -69,6 +69,8 @@
 
 .relatedTags a {
   color: #7C7B7F;
+  display: block;
+  padding-bottom: 6px;
 }
 
 /* 320, 418, 641, 961, 1025, 1281 */

@@ -10,13 +10,12 @@ import { MDXRemote } from 'next-mdx-remote'
 const componentsOverride = { }
 
 export function HomepageFAQ({ source, faq }) {
-  return (
-              <div className="content">
-                <MDXRemote {...source} components={componentsOverride} />
-              </div>);
+  return <div className="content">
+    <MDXRemote {...source} components={componentsOverride} />
+  </div>
 }
 
-export default function Home({ list }) {
+export default function Home({ priority, all }) {
   return (
     <div>
       <Meta />
@@ -27,8 +26,14 @@ export default function Home({ list }) {
             <Header />
             <div className={styles.contentWrapper}>
                 <div className={styles.home}>
-                  {list.map(props  => {
+                  {priority.map(props  => {
                     return <HomepageFAQ key={props.faq.slug} {...props} />
+                  })}
+
+                  <br />
+                  <h2 className="title is-5">All Questions</h2>
+                  {all.map(l => {
+                    return <Link key={l.slug} href={"/faq/" + l.slug}><a className={styles.faqTitle}>{l.data.title}</a></Link>
                   })}
                 </div>
             </div>
@@ -39,7 +44,8 @@ export default function Home({ list }) {
 }
 
 export async function getStaticProps({ params }) {
-  const list = [];
+  const all = faqs.getAll();
+  const priority = [];
 
   const slugs = [
     "what-is-saito",
@@ -50,9 +56,9 @@ export async function getStaticProps({ params }) {
     const faq = faqs.getBySlug(slug);
     const content = `${faq.content.trim()} <a href="/faq/${faq.slug}/">#</a>`;
     const source = await serialize(content);
-    list.push({ faq, source });
+    priority.push({ faq, source });
   }
 
-  return { props: { list } };
+  return { props: { priority, all } };
 }
 

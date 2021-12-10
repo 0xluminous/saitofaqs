@@ -6,5 +6,5 @@ tags:
 - security
 ---
 
-PoW and PoS collects $1 from users and gets $0.50 cost of attack. Saito collects $1 from users and gets $1 cost-of-attack.
+Proof-of-work and proof-of-stake collects $1 from users and gets $0.50 cost of attack. Saito collects $1 from users and gets $1 cost-of-attack.
 

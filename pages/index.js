@@ -38,7 +38,7 @@ export default function Home({ priority, grouped }) {
             <div className={styles.subcontentWrapper}>
               <div className="columns is-multiline">
                 {Object.keys(grouped).map(group => {
-                  return <div key={group} className="column is-half mb-4">
+                  return <div key={group} className="column is-full mb-4">
                     <h2 className="title is-5 mb-1">{utils.capitalizeFirstLetter(group)}</h2>
                     {grouped[group].map(l => {
                       return <Link key={l.slug} href={"/faq/" + l.slug}><a className={styles.faqTitle}>{l.data.title}</a></Link>

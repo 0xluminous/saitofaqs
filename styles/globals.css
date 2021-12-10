@@ -3,6 +3,10 @@
 /*
  * #FEFFFF white
  * #F5FCFF off-white
+ * #F2F4F7 offer-white
+ * #E8EAED very very very very light gray (lol)
+ * #DEE0E3 very very very light gray
+ * #D4D6D9 very very light gray
  * #CDD1D4 very light gray
  * #A5A6A9 light gray
  * #7C7B7F dark gray
@@ -59,6 +63,17 @@ a:hover {
   right: 0px;
   background: #FF3246;
   position: absolute;
+}
+
+.content blockquote {
+  background: #F2F4F7;
+  font-style: italic;
+  font-size: 20px;
+  line-height: 31px;
+  padding: 20px 30px;
+  border-color: #CDD1D4;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
 }
 
 /* 320, 418, 641, 961, 1025, 1281 */

@@ -1,5 +1,6 @@
 .wrapper {
   max-width: 720px;
+  min-height: 1024px;
 }
 
 .header {
@@ -27,6 +28,12 @@
 
 .subcontentWrapper {
   padding: 20px 30px;
+  opacity: 0.8;
+}
+
+.subcontentWrapper h2 {
+  font-size: 18px;
+  opacity: 0.8;
 }
 
 .subcontentWrapper a {
@@ -159,4 +166,15 @@
   }
 }
 
+
 /* cube: end */
+
+@media (min-width:1281px)  {
+  .subcontentWrapper {
+    position: absolute;
+    top: 100px;
+    left: 950px;
+    padding-right: 0px;
+    padding-top: 0px;
+  }
+}

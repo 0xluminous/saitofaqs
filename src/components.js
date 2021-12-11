@@ -33,7 +33,7 @@ export function Header() {
 export function Footer() {
   return (
     <div className={styles.disclaimer}>
-      not associated with official Saito organization, created by <a href="https://twitter.com/0xluminous">0xluminous</a>
+      created by <a href="https://twitter.com/0xluminous">0xluminous</a>
     </div>
   );
 }

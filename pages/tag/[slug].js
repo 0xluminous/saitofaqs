@@ -1,14 +1,15 @@
 import Link from "next/link"
 import Head from 'next/head'
 import { MDXRemote } from 'next-mdx-remote'
-import { Meta, Header, Sidebar, Footer } from "../../src/components"
+import { Meta, Header, Sidebar, Footer, RelatedTags } from "../../src/components"
 import styles from "../../styles/faq.module.css"
+import * as faqs from "../../src/faqs"
 import * as tags from "../../src/tags"
 import * as utils from "../../src/utils"
 
 const componentsOverride = { }
 
-export default function Tag({ slug, list }) {
+export default function Tag({ slug, list, grouped }) {
   return (
     <div>
       <Meta />
@@ -29,6 +30,9 @@ export default function Tag({ slug, list }) {
               </div>
             </div>
             <Sidebar />
+
+            <RelatedTags {...grouped} />
+
             <Footer />
           </div>
       </div>
@@ -38,7 +42,10 @@ export default function Tag({ slug, list }) {
 
 export async function getStaticProps({ params }) {
   const list = tags.getBySlug(params.slug);
-  return { props: { list, slug: params.slug } };
+
+  const allTags = tags.getAll();
+  const grouped = faqs.getByTags(allTags);
+  return { props: { list, slug: params.slug, grouped } };
 }
 
 export async function getStaticPaths() {

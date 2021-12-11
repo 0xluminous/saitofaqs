@@ -43,7 +43,7 @@ export function RelatedTags(grouped) {
     <div className={styles.subcontentWrapper}>
       <div className="columns is-multiline">
         {Object.keys(grouped).map(group => {
-          return <div key={group} className="column mb-6">
+          return <div key={group} className="column is-full mb-6">
             <h2 className="title is-5 mb-1">Other {utils.capitalizeFirstLetter(group)} Questions</h2>
             {grouped[group].map(l => {
               return <Link key={l.slug} href={"/faq/" + l.slug}><a className={styles.faqTitle}>{l.data.title}</a></Link>

@@ -2,7 +2,7 @@ import Head from "next/head"
 import Link from "next/link"
 import Image from "next/image"
 import styles from "../styles/faq.module.css"
-import { Meta, Header, Footer, Sidebar } from "../src/components"
+import { Meta, Header, Footer, Sidebar, RelatedTags } from "../src/components"
 import * as faqs from "../src/faqs"
 import * as tags from "../src/tags"
 import * as utils from "../src/utils"
@@ -36,20 +36,7 @@ export default function Home({ priority, grouped }) {
             </div>
 
             <Sidebar />
-
-            <div className={styles.subcontentWrapper}>
-              <div className="columns is-multiline">
-                {Object.keys(grouped).map(group => {
-                  return <div key={group} className="column is-full mb-4">
-                    <h2 className="title mb-1">{utils.capitalizeFirstLetter(group)}</h2>
-                    {grouped[group].map(l => {
-                      return <Link key={l.slug} href={"/faq/" + l.slug}><a className={styles.faqTitle}>{l.data.title}</a></Link>
-                    })}
-                  </div>
-                })}
-              </div>
-            </div>
-
+            <RelatedTags {...grouped} />
             <Footer />
           </div>
       </div>

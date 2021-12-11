@@ -1,7 +1,7 @@
 import Link from "next/link"
 import Head from 'next/head'
 import { MDXRemote } from 'next-mdx-remote'
-import { Meta, Header } from "../../src/components"
+import { Meta, Header, Sidebar, Footer } from "../../src/components"
 import styles from "../../styles/faq.module.css"
 import * as tags from "../../src/tags"
 import * as utils from "../../src/utils"
@@ -28,6 +28,8 @@ export default function Tag({ slug, list }) {
                 })}
               </div>
             </div>
+            <Sidebar />
+            <Footer />
           </div>
       </div>
     </div>

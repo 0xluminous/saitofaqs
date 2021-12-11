@@ -2,7 +2,7 @@ import Head from "next/head"
 import Link from "next/link"
 import Image from "next/image"
 import styles from "../styles/faq.module.css"
-import { Meta, Header, Sidebar } from "../src/components"
+import { Meta, Header, Footer, Sidebar } from "../src/components"
 import * as faqs from "../src/faqs"
 import * as tags from "../src/tags"
 import * as utils from "../src/utils"
@@ -50,6 +50,7 @@ export default function Home({ priority, grouped }) {
               </div>
             </div>
 
+            <Footer />
           </div>
       </div>
     </div>

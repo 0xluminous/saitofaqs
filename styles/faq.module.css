@@ -120,6 +120,17 @@
   padding-bottom: 6px;
 }
 
+.disclaimer {
+  margin: 5px auto;
+  color: #7C7B7F;
+  font-size: 14px;
+  text-align: center;
+}
+
+.disclaimer a {
+  color: #7C7B7F;
+}
+
 /* 320, 418, 641, 961, 1025, 1281 */
 
 /* cube: start */

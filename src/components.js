@@ -55,13 +55,13 @@ export function Sidebar() {
               <ul>
                 <li>
                   <span className="icon-text">
-                    <span className="icon"><img src="/file-pdf-solid.svg" /></span>
+                    <span className="icon"><img src="/file-pdf.svg" /></span>
                     <a href="https://saito.io/saito-whitepaper.pdf">Whitepaper</a>
                   </span>
                 </li>
                 <li>
                   <span className="icon-text">
-                    <span className="icon"><img src="/file-pdf-solid.svg" /></span>
+                    <span className="icon"><img src="/file-pdf.svg" /></span>
                     <a href="https://saito.io/saito-litepaper.pdf">Litepaper</a>
                   </span>
                 </li>
@@ -79,7 +79,7 @@ export function Sidebar() {
                 </li>
                 <li>
                   <span className="icon-text">
-                    <span className="icon"><img src="/list.svg" /></span>
+                    <span className="icon"><img src="/fire.svg" /></span>
                     <a href="https://github.com/0xluminous/awesome-saito">Awesome Saito</a>
                   </span>
                 </li>

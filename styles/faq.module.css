@@ -36,6 +36,29 @@
   opacity: 0.8;
 }
 
+.sidebar {
+  padding: 20px 30px;
+  opacity: 0.8;
+}
+
+.sidebar p {
+  font-size: 16px;
+}
+
+.sidebar li { 
+  margin: 10px 0;
+}
+
+.sidebar img { 
+  height: 22px;
+  filter: invert(32%) sepia(6%) saturate(295%) hue-rotate(251deg) brightness(92%) contrast(89%);
+}
+
+.sidebar a {
+  padding-left: 6px;
+  color: #545054;
+}
+
 .subcontentWrapper a {
   line-height: 22px
 }
@@ -169,7 +192,15 @@
 
 /* cube: end */
 
-/*
+@media (min-width:1281px)  {
+  .sidebar {
+    position: absolute;
+    top: 350px;
+    left: -60px;
+    width: 350px;
+  }
+}
+
 @media (min-width:1281px)  {
   .subcontentWrapper {
     position: absolute;
@@ -179,4 +210,3 @@
     padding-top: 0px;
   }
 }
-*/

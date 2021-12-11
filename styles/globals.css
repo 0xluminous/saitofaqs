@@ -76,4 +76,10 @@ a:hover {
   border-bottom-right-radius: 2px;
 }
 
+.saito {
+  background: url("/small-cube.png") 0px 1px no-repeat;
+  padding-left: 22px;
+  display: inline-block;
+}
+
 /* 320, 418, 641, 961, 1025, 1281 */

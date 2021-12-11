@@ -52,6 +52,8 @@ export async function getStaticProps({ params }) {
   const slugs = [
     "what-is-saito",
     "why-do-we-need-another-blockchain",
+    "why-is-openness-more-important-than-decentralization",
+    "whats-wrong-with-bitcoin",
   ];
 
   for (const slug of slugs) {

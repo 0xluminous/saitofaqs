@@ -2,7 +2,7 @@ import Link from "next/link"
 import Head from 'next/head'
 import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemote } from 'next-mdx-remote'
-import { Meta, Header, RelatedTags } from "../../src/components"
+import { Meta, Header, RelatedTags, Sidebar  } from "../../src/components"
 import styles from "../../styles/faq.module.css"
 import * as faqs from "../../src/faqs"
 
@@ -48,6 +48,7 @@ export default function FAQPage({ source, faq, related }) {
             <Header />
             <FAQ faq={faq} source={source} />
             <RelatedTags {...related} />
+            <Sidebar />
           </div>
       </div>
     </div>

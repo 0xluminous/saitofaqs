@@ -45,20 +45,55 @@ export function RelatedTags(grouped) {
       </div>
     </div>
   );
+}
 
-  /*
-    <div className={styles.subcontentWrapper}>
-      {Object.keys(related).map(tag => {
-        return <div key={tag} className={styles.relatedTagsGroup}>
-          <h2 className="title is-5 mb-2 mt-2">Other {utils.capitalizeFirstLetter(tag)} Questions</h2>
-          {related[tag].map(faq => {
-            return <div key={faq.slug}>
-              <a href={"/faq/" + faq.slug}>{faq.data.title}</a>
-            </div>
-          })}
-        </div>
-      })}
-    </div>
-  )
-  */
+export function Sidebar() {
+  return (
+          <div className={styles.sidebar}>
+            <p>
+              <span className="saito">Saito</span> is a new layer-one blockchain with a breakthrough new consensus model.
+              <ul>
+                <li>
+                  <span className="icon-text">
+                    <span className="icon"><img src="/file-pdf-solid.svg" /></span>
+                    <a href="https://saito.io/saito-whitepaper.pdf">Whitepaper</a>
+                  </span>
+                </li>
+                <li>
+                  <span className="icon-text">
+                    <span className="icon"><img src="/file-pdf-solid.svg" /></span>
+                    <a href="https://saito.io/saito-litepaper.pdf">Litepaper</a>
+                  </span>
+                </li>
+                <li>
+                  <span className="icon-text">
+                    <span className="icon"><img src="/youtube.svg" /></span>
+                    <a href="https://www.youtube.com/watch?v=C81D6B9sgH8">Openness not Decentralization</a>
+                  </span>
+                </li>
+                <li>
+                  <span className="icon-text">
+                    <span className="icon"><img src="/medium.svg" /></span>
+                    <a href="https://0xluminous.com/the-zen-of-saito-5d7ca977ac4f">The Zen of Saito</a>
+                  </span>
+                </li>
+                <li>
+                  <span className="icon-text">
+                    <span className="icon"><img src="/list.svg" /></span>
+                    <a href="https://github.com/0xluminous/awesome-saito">Awesome Saito</a>
+                  </span>
+                </li>
+                <li>
+                  <span className="icon-text">
+                    <span className="icon"><img src="/arcade.svg" /></span>
+                    <a href="https://saito.io/arcade/">Saito Arcade</a>
+                  </span>
+                </li>
+
+
+              </ul>
+            </p>
+          </div>
+  );
+
 }

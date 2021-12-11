@@ -2,7 +2,7 @@ import Head from "next/head"
 import Link from "next/link"
 import Image from "next/image"
 import styles from "../styles/faq.module.css"
-import { Meta, Header } from "../src/components"
+import { Meta, Header, Sidebar } from "../src/components"
 import * as faqs from "../src/faqs"
 import * as tags from "../src/tags"
 import * as utils from "../src/utils"
@@ -35,39 +35,7 @@ export default function Home({ priority, grouped }) {
                 </div>
             </div>
 
-            <div className={styles.sidebar}>
-              <p>
-                <span className="saito">Saito</span> is a new layer-one blockchain with a breakthrough new consensus model.
-                <ul>
-                  <li>
-                    <span className="icon-text">
-                      <span className="icon"><img src="/file-pdf-solid.svg" /></span>
-                      <a href="https://saito.io/saito-whitepaper.pdf">Whitepaper</a>
-                    </span>
-                  </li>
-                  <li>
-                    <span className="icon-text">
-                      <span className="icon"><img src="/youtube.svg" /></span>
-                      <a href="https://www.youtube.com/watch?v=C81D6B9sgH8">Openness not Decentralization</a>
-                    </span>
-                  </li>
-                  <li>
-                    <span className="icon-text">
-                      <span className="icon"><img src="/list.svg" /></span>
-                      <a href="https://github.com/0xluminous/awesome-saito">Awesome Saito</a>
-                    </span>
-                  </li>
-                  <li>
-                    <span className="icon-text">
-                      <span className="icon"><img src="/arcade.svg" /></span>
-                      <a href="https://saito.io/arcade/">Saito Arcade</a>
-                    </span>
-                  </li>
-
-
-                </ul>
-              </p>
-            </div>
+            <Sidebar />
 
             <div className={styles.subcontentWrapper}>
               <div className="columns is-multiline">

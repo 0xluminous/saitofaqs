@@ -36,9 +36,14 @@ export default function Home({ priority, grouped, cloud }) {
             </div>
 
             <components.Sidebar />
+            <div className={styles.genericSubcontentWrapper}>
+              <Link href="/faq/all"><a className={styles.viewAllQuestionsLink}>View all frequently asked questions</a></Link> <img className={styles.backIcon} src="/forward-arrow.svg" />
+            </div>
             <components.TagCloud cloud={cloud} />
             <components.RelatedTags {...grouped} />
+
             <components.Footer />
+            
           </div>
       </div>
     </div>

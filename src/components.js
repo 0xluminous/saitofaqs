@@ -16,6 +16,10 @@ export function Meta() {
       gtag('js', new Date());
 
       gtag('config', 'G-9E7G7PSM9Z')`,}} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Saito FAQS" />
+    <meta name="twitter:description" content="Saito is a new layer-one blockchain with a breakthrough new consensus model." />
+    <meta name="twitter:image" content="https://b11f-50-45-151-29.ngrok.io/social.png" />
   </Head>
 }
 

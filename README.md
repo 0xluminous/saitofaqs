@@ -34,3 +34,8 @@ tags:
 
 Saito is a layer-one blockchain. The network is noteworthy for being [more secure than Bitcoin](/faq/how-is-saito-more-secure-than-bitcoin) while making payments not just to miners and stakers but also the nodes in the network that offer data-services to users in the network.
 ```
+
+## TODO
+- [ ] add more faqs
+- [ ] find more ways to style/break-up text
+- [ ] search

@@ -13,6 +13,10 @@ export default function FAQs({ grouped }) {
   return (
     <div>
       <components.Meta />
+      <Head>
+        <meta name="twitter:title" content={"All Saito FAQS"} />
+      </Head>
+
 
       <div className="navbar"></div>
       <div className="container">

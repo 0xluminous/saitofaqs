@@ -15,6 +15,7 @@ export default function Tag({ slug, list, grouped }) {
       <Meta />
       <Head>
         <title key="title">{utils.capitalizeFirstLetter(slug)} — Saito FAQs</title>
+        <meta name="twitter:title" content={"Saito " + utils.capitalizeFirstLetter(slug) + " FAQS"} />
       </Head>
 
       <div className="navbar"></div>

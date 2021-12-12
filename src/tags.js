@@ -26,4 +26,24 @@ export function getBySlug(slug) {
 }
 
 
+export function getCloud() {
+  const index = {};
+  const all = faqs.getAll();
+  for (const faq of all) {
+    const tags = faq.data.tags || [];
+    for (const tag of tags) {
+      if (index[tag]) {
+        index[tag] += 1;
+      } else {
+        index[tag] = 1;
+      }
+    }
+  }
+
+  const entries = Object.entries(index).sort((a, b) => {
+    return b[1] - a[1];
+  });
+
+  return entries;
+}
 

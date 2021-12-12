@@ -2,7 +2,7 @@ import Head from "next/head"
 import Link from "next/link"
 import Image from "next/image"
 import styles from "../styles/faq.module.css"
-import { Meta, Header, Footer, Sidebar, RelatedTags } from "../src/components"
+import * as components from "../src/components"
 import * as faqs from "../src/faqs"
 import * as tags from "../src/tags"
 import * as utils from "../src/utils"
@@ -17,15 +17,15 @@ export function HomepageFAQ({ source, faq }) {
   </div>
 }
 
-export default function Home({ priority, grouped }) {
+export default function Home({ priority, grouped, cloud }) {
   return (
     <div>
-      <Meta />
+      <components.Meta />
 
       <div className="navbar"></div>
       <div className="container">
           <div className={styles.wrapper}>
-            <Header />
+            <components.Header />
             <div className={styles.contentWrapper}>
                 <div className={styles.home}>
                   {priority.map(props  => {
@@ -35,9 +35,10 @@ export default function Home({ priority, grouped }) {
                 </div>
             </div>
 
-            <Sidebar />
-            <RelatedTags {...grouped} />
-            <Footer />
+            <components.Sidebar />
+            <components.TagCloud cloud={cloud} />
+            <components.RelatedTags {...grouped} />
+            <components.Footer />
           </div>
       </div>
     </div>
@@ -45,9 +46,10 @@ export default function Home({ priority, grouped }) {
 }
 
 export async function getStaticProps({ params }) {
-  const allTags = tags.getAll();
-  const grouped = faqs.getByTags(allTags);
-  const priority = [];
+
+  const cloud = tags.getCloud();
+
+  const grouped = faqs.getByTags(tags.getAll());
 
   const slugs = [
     "what-is-saito",
@@ -56,6 +58,7 @@ export async function getStaticProps({ params }) {
     "whats-wrong-with-bitcoin",
   ];
 
+  const priority = [];
   for (const slug of slugs) {
     const faq = faqs.getBySlug(slug);
     const content = `${faq.content.trim()} <a href="/faq/${faq.slug}/">#</a>`;
@@ -63,6 +66,6 @@ export async function getStaticProps({ params }) {
     priority.push({ faq, source });
   }
 
-  return { props: { priority, grouped } };
+  return { props: { priority, grouped, cloud } };
 }
 

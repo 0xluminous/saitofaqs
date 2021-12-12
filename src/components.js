@@ -105,3 +105,24 @@ export function Sidebar() {
   );
 
 }
+
+function getTagClassForSize(size) {
+  if (size >= 4) {
+    return "is-large"
+  } else if (size > 1) {
+    return "is-medium"
+  } else {
+    return "is-normal"
+  }
+}
+
+export function TagCloud({ cloud }) {
+  return <div className={styles.tagcloud}>
+    <div className="tags">
+      {cloud.map(obj => {
+        const className = `tag ${getTagClassForSize(obj[1])}`;
+        return <span className={className}><Link href={"/tag/" + obj[0]}>{obj[0]}</Link></span>
+      })}
+    </div>
+  </div>
+}

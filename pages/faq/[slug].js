@@ -13,12 +13,11 @@ export function FAQ({ source, faq }) {
             <div className="content">
               <h1>{faq.data.title}</h1>
               <MDXRemote {...source} components={componentsOverride} />
-              {(faq.data.tags && faq.data.tags.length > 0) && <div className={styles.tags}>
+              {(faq.data.tags && faq.data.tags.length > 0) && <div className="tags">
                 {faq.data.tags.map(tag => {
                   if (!tag) { return; }
-                  const value = `#${tag}`;
                   const href = `/tag/${tag}`;
-                  return <span key={tag} className={styles.tag}><Link href={href}>{value}</Link></span>;
+                  return <span key={tag} className="tag"><Link href={href}>{tag}</Link></span>;
                 })}
               </div>}
               <div className={styles.meta}>

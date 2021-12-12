@@ -82,4 +82,18 @@ a:hover {
   display: inline-block;
 }
 
+.tags {
+  margin-bottom: 20px;
+}
+
+.tag {
+  margin-right: 14px;
+}
+
+.tag a {
+  color: #7C7B7F;
+  text-decoration: none;
+}
+
+
 /* 320, 418, 641, 961, 1025, 1281 */

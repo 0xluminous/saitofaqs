@@ -93,19 +93,6 @@
   font-size: 14px;
 }
 
-.tags {
-  margin-bottom: 20px;
-}
-
-.tag {
-  margin-right: 14px;
-}
-
-.tag a {
-  color: #7C7B7F;
-  font-style: italic;
-}
-
 .meta .sourceLink, .meta .editLink {
   float: right;
   margin-left: 5px;
@@ -134,6 +121,20 @@
 
 .disclaimer a {
   color: #7C7B7F;
+}
+
+.tagcloud {
+  margin: 50px auto;
+  max-width: 450px;
+  text-align: center;
+}
+
+.tagcloud {
+}
+
+.tagcloud > div > span {
+  font-size: 16px;
+  margin: 0 auto;
 }
 
 /* 320, 418, 641, 961, 1025, 1281 */

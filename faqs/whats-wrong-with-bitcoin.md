@@ -8,6 +8,6 @@ tags:
 ---
 
 The reason Bitcoin had the 3 forks (BTC, BCH, BSV) is because the stakeholders of the system (users, businesses and miners) were not properly incentivized.
-So while Bitcoin did solve a complex collective action problem, it didn’t balance the incentives properly and the system is ripping itself apart.
-Solving this isn’t easy, every blockchain has this problem.
+So while Bitcoin did solve a complex collective action problem, it didn’t balance the incentives properly, and the system is ripping itself apart.
+Solving this isn’t easy; every blockchain has this problem.
 

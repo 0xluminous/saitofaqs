@@ -27,24 +27,24 @@ export function Header() {
   return (
       <div className={styles.header}>
         <img src="/red-cube.png" alt="Saito Cube" className={styles.cube} />
-        <a href="/">
+        <Link href='/' passHref>
           <img src="/logo.png" alt="Saito FAQs" />
-        </a>
+        </Link>
       </div>
   )
 }
 
 export function Footer() {
   return (
-    <div className={styles.disclaimer}>
+    <footer className={styles.disclaimer}>
       created by <a href="https://twitter.com/0xluminous">0xluminous</a>
-    </div>
+    </footer>
   );
 }
 
 export function RelatedTags(grouped) {
   return (
-    <div className={styles.subcontentWrapper}>
+    <aside className={styles.subcontentWrapper}>
       <div className="columns is-multiline">
         {Object.keys(grouped).map(group => {
           return <div key={group} className="column is-full mb-6">
@@ -55,57 +55,63 @@ export function RelatedTags(grouped) {
           </div>
         })}
       </div>
-    </div>
+    </aside>
   );
 }
 
 export function Sidebar() {
+  const links = [
+    {
+      iconSrc: '/file-pdf.svg',
+      href: 'https://saito.io/saito-whitepaper.pdf',
+      title: 'Saito Whitepaper'
+    },
+    {
+      iconSrc: '/file-pdf.svg',
+      href: 'https://saito.io/saito-litepaper.pdf',
+      title: 'Saito Litepaper'
+    },
+    {
+      iconSrc: '/youtube.svg',
+      href: 'https://www.youtube.com/watch?v=C81D6B9sgH8',
+      title: 'Openness not Decentralization'
+    },
+    {
+      iconSrc: '/medium.svg',
+      href: 'https://0xluminous.com/the-zen-of-saito-5d7ca977ac4f',
+      title: 'The Zen of Saito'
+    },
+    {
+      iconSrc: '/fire.svg',
+      href: 'https://github.com/0xluminous/awesome-saito',
+      title: 'Awesome Saito'
+    },
+    {
+      iconSrc: '/arcade.svg',
+      href: 'https://saito.io/arcade/',
+      title: 'Saito Arcade'
+    },
+  ]
   return (
-          <div className={styles.sidebar}>
-            <p>
-              <span className="saito"><a href="https://saito.io">Saito</a></span> is a new layer-one blockchain with a breakthrough new consensus model.
-            </p>
-              <ul>
-                <li>
-                  <span className="icon-text">
-                    <span className="icon"><img src="/file-pdf.svg" /></span>
-                    <a href="https://saito.io/saito-whitepaper.pdf">Saito Whitepaper</a>
-                  </span>
-                </li>
-                <li>
-                  <span className="icon-text">
-                    <span className="icon"><img src="/file-pdf.svg" /></span>
-                    <a href="https://saito.io/saito-litepaper.pdf">Saito Litepaper</a>
-                  </span>
-                </li>
-                <li>
-                  <span className="icon-text">
-                    <span className="icon"><img src="/youtube.svg" /></span>
-                    <a href="https://www.youtube.com/watch?v=C81D6B9sgH8">Openness not Decentralization</a>
-                  </span>
-                </li>
-                <li>
-                  <span className="icon-text">
-                    <span className="icon"><img src="/medium.svg" /></span>
-                    <a href="https://0xluminous.com/the-zen-of-saito-5d7ca977ac4f">The Zen of Saito</a>
-                  </span>
-                </li>
-                <li>
-                  <span className="icon-text">
-                    <span className="icon"><img src="/fire.svg" /></span>
-                    <a href="https://github.com/0xluminous/awesome-saito">Awesome Saito</a>
-                  </span>
-                </li>
-                <li>
-                  <span className="icon-text">
-                    <span className="icon"><img src="/arcade.svg" /></span>
-                    <a href="https://saito.io/arcade/">Saito Arcade</a>
-                  </span>
-                </li>
-
-
-              </ul>
-          </div>
+    <aside className={styles.sidebar}>
+      <p>
+        <span className="saito"><a href="https://saito.io">Saito</a></span> is a new layer-one blockchain with a breakthrough new consensus model.
+      </p>
+      <ul>
+        {links.map(link => {
+          return (
+            <li key={link.href}>
+              <span className="icon-text">
+                <span className="icon">
+                  <Image width={22} height={22} alt={link.title} src={link.iconSrc} />
+                </span>
+                <a href={link.href}>{link.title}</a>
+              </span>
+            </li>
+          )
+        })}
+      </ul>
+    </aside>
   );
 
 }

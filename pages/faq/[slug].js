@@ -11,7 +11,8 @@ import strip from 'strip-markdown'
 const componentsOverride = { }
 
 export function FAQ({ source, faq }) {
-  return (<div className={styles.contentWrapper}>
+  const tagClasses = [styles.tag, 'tag'].join(' ')
+  return (<main className={styles.contentWrapper}>
             <div className="content">
               <h1>{faq.data.title}</h1>
               <MDXRemote {...source} components={componentsOverride} />
@@ -19,7 +20,7 @@ export function FAQ({ source, faq }) {
                 {faq.data.tags.map(tag => {
                   if (!tag) { return; }
                   const href = `/tag/${tag}`;
-                  return <span key={tag} className="tag"><Link href={href}>{tag}</Link></span>;
+                  return <span key={tag} className={tagClasses}><Link href={href}>{tag}</Link></span>;
                 })}
               </div>}
               <div className={styles.meta}>
@@ -32,7 +33,7 @@ export function FAQ({ source, faq }) {
                 </div>
               </div>
             </div>
-          </div>)
+          </main>)
 }
 
 export default function FAQPage({ source, faq, related, stripped }) {

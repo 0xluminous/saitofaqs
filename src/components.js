@@ -69,13 +69,13 @@ export function Sidebar() {
                 <li>
                   <span className="icon-text">
                     <span className="icon"><img src="/file-pdf.svg" /></span>
-                    <a href="https://saito.io/saito-whitepaper.pdf">Whitepaper</a>
+                    <a href="https://saito.io/saito-whitepaper.pdf">Saito Whitepaper</a>
                   </span>
                 </li>
                 <li>
                   <span className="icon-text">
                     <span className="icon"><img src="/file-pdf.svg" /></span>
-                    <a href="https://saito.io/saito-litepaper.pdf">Litepaper</a>
+                    <a href="https://saito.io/saito-litepaper.pdf">Saito Litepaper</a>
                   </span>
                 </li>
                 <li>

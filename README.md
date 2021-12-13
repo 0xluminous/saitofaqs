@@ -39,3 +39,4 @@ Saito is a layer-one blockchain. The network is noteworthy for being [more secur
 - [ ] add more faqs
 - [ ] find more ways to style/break-up text
 - [ ] search
+- [ ] actually answer open vs decentralized

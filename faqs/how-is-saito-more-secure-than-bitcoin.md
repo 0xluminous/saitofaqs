@@ -6,5 +6,5 @@ tags:
 - security
 ---
 
-Proof-of-work and proof-of-stake collects $1 from users and gets $0.50 cost of attack. Saito collects $1 from users and gets $1 cost-of-attack.
+Proof-of-work and proof-of-stake collect $1 from users and get a $0.50 cost of attack. Saito collects $1 from users and gets a $1 cost-of-attack.
 

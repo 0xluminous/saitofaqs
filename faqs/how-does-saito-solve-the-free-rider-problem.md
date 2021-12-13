@@ -6,7 +6,7 @@ tags:
 - economic
 ---
 
-Markets need to control the distribution of benefits in order to induce people to pay for them. If you're producing something that everyone can enjoy, you'll have a hard to convincing someone to pay you to cover the cost.
+Markets need to control the distribution of benefits in order to induce people to pay for them. If you're producing something that everyone can enjoy, you'll have a hard time convincing someone to pay you to cover the cost.
 
 The traditional solution is to privatize things, giving someone an incentive to manage it. But the public network in any blockchain is a public good.
 

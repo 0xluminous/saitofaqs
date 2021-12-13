@@ -125,7 +125,7 @@ export function TagCloud({ cloud }) {
     <div className="tags">
       {cloud.map(obj => {
         const className = `tag ${getTagClassForSize(obj[1])}`;
-        return <span className={className}><Link href={"/tag/" + obj[0]}>{obj[0]}</Link></span>
+        return <span key={obj[0]} className={className}><Link href={"/tag/" + obj[0]}>{obj[0]}</Link></span>
       })}
     </div>
   </div>

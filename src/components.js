@@ -64,6 +64,7 @@ export function Sidebar() {
           <div className={styles.sidebar}>
             <p>
               <span className="saito"><a href="https://saito.io">Saito</a></span> is a new layer-one blockchain with a breakthrough new consensus model.
+            </p>
               <ul>
                 <li>
                   <span className="icon-text">
@@ -104,7 +105,6 @@ export function Sidebar() {
 
 
               </ul>
-            </p>
           </div>
   );
 

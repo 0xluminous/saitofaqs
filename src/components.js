@@ -75,7 +75,7 @@ export function Sidebar() {
                 <li>
                   <span className="icon-text">
                     <span className="icon"><img src="/file-pdf.svg" /></span>
-                    <a href="https://saito.io/saito-litepaper.pdf">Saito Litepaper</a>
+                    <a href="https://docs.google.com/viewer?url=https://github.com/SaitoTech/saito-lite/raw/master/docs/saito-litepaper.pdf">Saito Litepaper</a>
                   </span>
                 </li>
                 <li>

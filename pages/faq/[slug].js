@@ -24,9 +24,9 @@ export function FAQ({ source, faq }) {
               </div>}
               <div className={styles.meta}>
                 <img className={styles.backIcon} src="/back-arrow.svg" /> <Link href="/">back home</Link>
-                <div className={styles.sourceLink}>
+                {faq.data.source && <div className={styles.sourceLink}>
                   <Link href={faq.data.source}>source</Link>
-                </div>
+                </div>}
                 <div className={styles.editLink}>
                   <Link href={"https://github.com/0xluminous/saitofaqs/edit/main/faqs/" + faq.slug + ".md"}>edit</Link>
                 </div>

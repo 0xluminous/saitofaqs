@@ -74,12 +74,6 @@ export function Sidebar() {
                 </li>
                 <li>
                   <span className="icon-text">
-                    <span className="icon"><img src="/file-pdf.svg" /></span>
-                    <a href="https://docs.google.com/viewer?url=https://github.com/SaitoTech/saito-lite/raw/master/docs/saito-litepaper.pdf">Saito Litepaper</a>
-                  </span>
-                </li>
-                <li>
-                  <span className="icon-text">
                     <span className="icon"><img src="/youtube.svg" /></span>
                     <a href="https://www.youtube.com/watch?v=C81D6B9sgH8">Openness not Decentralization</a>
                   </span>

@@ -43,7 +43,7 @@ export default function FAQPage({ source, faq, related, stripped }) {
         <title key="title">{faq.data.title} — Saito FAQs</title>
         <meta name="twitter:title" content={faq.data.title + " — Saito FAQS"} />
         <meta name="twitter:description" content={stripped.substr(0, 250)} />
-        <meta name="twitter:image" content="https://b11f-50-45-151-29.ngrok.io/social.png" />
+        <meta name="twitter:image" content="https://saitofaqs.com/social.png" />
       </Head>
 
       <div className="navbar"></div>

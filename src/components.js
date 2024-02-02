@@ -38,6 +38,9 @@ export function Footer() {
   return (
     <div className={styles.disclaimer}>
       created by <a href="https://twitter.com/0xluminous">0xluminous</a>
+
+      <script data-collect-dnt="true" async defer src="https://x.cac.app/latest.js"></script>
+      <noscript><img src="https://x.cac.app/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
     </div>
   );
 }

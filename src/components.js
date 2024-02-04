@@ -30,6 +30,7 @@ export function Header() {
         <a href="/">
           <img src="/logo.png" alt="Saito FAQs" />
         </a>
+      <script defer data-domain="saitofaqs.com" src="https://s.cac.app/js/script.outbound-links.js"></script>
       </div>
   )
 }
@@ -38,15 +39,6 @@ export function Footer() {
   return (
     <div className={styles.disclaimer}>
       created by <a href="https://twitter.com/0xluminous">0xluminous</a>
-
-      <script>
-        var script = document.createElement('script');
-        script.defer = true;
-        script.src = "https://s.cac.app/js/script.outbound-links.js";
-        script.dataset.domain = "saitofaqs.com";
-
-        document.getElementsByTagName('head')[0].appendChild(script);
-      </script>
     </div>
   );
 }

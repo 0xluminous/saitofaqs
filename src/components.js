@@ -39,8 +39,14 @@ export function Footer() {
     <div className={styles.disclaimer}>
       created by <a href="https://twitter.com/0xluminous">0xluminous</a>
 
-      <script data-collect-dnt="true" async defer src="https://x.cac.app/latest.js"></script>
-      <noscript><img src="https://x.cac.app/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
+      <script>
+        var script = document.createElement('script');
+        script.defer = true;
+        script.src = "https://s.cac.app/js/script.outbound-links.js";
+        script.dataset.domain = "saitofaqs.com";
+
+        document.getElementsByTagName('head')[0].appendChild(script);
+      </script>
     </div>
   );
 }
